@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asphalt Calculator</title>
+</head>
+<body>
+    <h2>Asphalt Calculator</h2>
+    <form id="asphaltForm">
+        <label for="area">Area (m²):</label>
+        <input type="number" id="area" name="area" required>
+        
+        <label for="thickness">Thickness (m):</label>
+        <input type="number" id="thickness" name="thickness" required>
+        
+        <label for="density">Density (kg/m³):</label>
+        <input type="number" id="density" name="density" value="2400">
+        
+        <button type="button" onclick="displayAsphalt()">Calculate</button>
+    </form>
+    <p id="result"></p>
+
+    <script>
+        function calculateAsphalt(area, thickness, density = 2400) {
+            if (isNaN(area) || isNaN(thickness) || isNaN(density)) {
+                return "Please enter valid numbers for area, thickness, and density.";
+            }
+            const volume = area * thickness;
+            const asphaltRequired = volume * density;
+            return asphaltRequired;
+        }
+
+        function displayAsphalt() {
+            const area = parseFloat(document.getElementById("area").value);
+            const thickness = parseFloat(document.getElementById("thickness").value);
+            const density = parseFloat(document.getElementById("density").value);
+            const result = calculateAsphalt(area, thickness, density);
+            document.getElementById("result").innerText = `Asphalt required: ${result} kg`;
+        }
+    </script>
+</body>
+</html>
