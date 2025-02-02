@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary Meta Tags -->
+    <title>Contact Us | Instant Asphalt Calculator</title>
+    <meta 
+      name="title" 
+      content="Contact Us | Instant Asphalt Calculator"
+    />
+    <meta 
+      name="description" 
+      content="Calculate asphalt requirements instantly with our professional-grade calculator. Get precise estimates for your paving projects with material cost breakdowns"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://asphaltcalculator.io/contact-us.html" />
+    <meta 
+      property="og:title" 
+      content="Contact Us | Instant Asphalt Calculator"
+    />
+    <meta 
+      property="og:description" 
+      content="Calculate asphalt needs for driveways, roads & parking lots. Instant results with material cost estimates."
+    />
+    <meta 
+      property="og:image" 
+      content="http://asphaltcalculator.io/assets/images/logo.png"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="http://asphaltcalculator.io/assets/images/logo.png" />
+    <meta property="twitter:url" content="http://asphaltcalculator.io/contact-us.html" />
+    <meta 
+      property="twitter:title" 
+      content="Contact Us | Instant Asphalt Calculator"
+    />
+    <meta 
+      property="twitter:description" 
+      content="Calculate asphalt needs for driveways, roads & parking lots. Instant results with material cost estimates."
+    />
+    <meta 
+      property="twitter:image" 
+      content="http://asphaltcalculator.io/assets/images/logo.png"
+    />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="http://asphaltcalculator.io/contact-us.html" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Asphalt Calculator",
+      "description": "Professional asphalt calculation tool for accurate paving estimates",
+      "url": "http://asphaltcalculator.io/contact-us.html",
+      "author": {
+        "@type": "Organization",
+        "name": "Asphalt Calculator"
+      },
+      "image": "http://asphaltcalculator.io/assets/images/logo.png",
+      "mainEntity": {
+        "@type": "SoftwareApplication",
+        "name": "Asphalt Calculator",
+        "applicationCategory": "ConstructionCalculator",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": "0.00",
+          "priceCurrency": "USD"
+        }
+      }
+    }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/images/logo.png">
+    <link rel="stylesheet" href="/assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="/assets/scss/pg-home.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Reuse existing variables and base styles */
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --success: #27ae60;
+            --danger: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+    
+
+        .contact-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            flex: 1;
+        }
+
+        .contact-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .contact-header h1 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .info-card {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--light);
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .info-card i {
+            font-size: 2rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+
+        .contact-form {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #bdc3c7;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--secondary);
+        }
+
+        .submit-btn {
+            background: var(--success);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .submit-btn:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+        .status-message {
+            text-align: center;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            display: none;
+        }
+
+        .success {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container">
+ 
+      <a class="navbar-brand ml-2" href="/index.html">     <img src='/assets/images/logo.png' style="height: 3rem;" class="img-fluid mr-3"> Asphalt Calculator</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/about-us.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/contact-us.html">Contact Us</a>
+          </li>
+   
+        </ul>
+      </div>
+    </div>
+  </nav>
+    <div class="contact-container">
+        <div class="contact-header">
+            <h1><i class="fas fa-envelope"></i> Contact Us</h1>
+            <p>Have questions? We're here to help!</p>
+        </div>
+
+        <div class="contact-info">
+            <div class="info-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Visit Us</h3>
+                <p>123 Construction Street<br>Build City, BC 12345</p>
+            </div>
+            
+            <div class="info-card">
+                <i class="fas fa-phone"></i>
+                <h3>Call Us</h3>
+                <p>Phone: (555) 123-4567<br>Fax: (555) 123-4568</p>
+            </div>
+            
+            <div class="info-card">
+                <i class="fas fa-clock"></i>
+                <h3>Hours</h3>
+                <p>Mon-Fri: 8am - 6pm<br>Sat: 9am - 4pm<br>Sun: Closed</p>
+            </div>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" required></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">
+                <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+
+            <div class="status-message" id="statusMessage"></div>
+        </form>
+    </div>
+    <footer>
+      <div class="footer-content">
+        <p class="copyright">
+          &copy; 2024 Asphalt Calculator. All rights reserved.
+        </p>
+        <div class="footer-links">
+          <a href="/privacy-policy.html" class="footer-link">Privacy Policy</a>
+          <a href="/terms-and-conditions.html" class="footer-link">Terms of Conditions</a>
+          <a href="/contact-us.html" class="footer-link">Contact Us</a>
+        </div>
+        <p class="disclaimer">
+          Results are estimates only. Actual requirements may vary.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Include previous footer here -->
+    
+    <script>
+        const contactForm = document.getElementById('contactForm');
+        const statusMessage = document.getElementById('statusMessage');
+
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+
+            statusMessage.classList.remove('success', 'error');
+            statusMessage.style.display = 'none';
+
+            // Simple validation
+            if (!name || !email || !subject || !message) {
+                showMessage('Please fill in all fields', 'error');
+                return;
+            }
+
+            if (!validateEmail(email)) {
+                showMessage('Please enter a valid email address', 'error');
+                return;
+            }
+
+            // Simulate form submission
+            showMessage('Message sent successfully!', 'success');
+            contactForm.reset();
+        });
+
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+
+        function showMessage(text, type) {
+            statusMessage.textContent = text;
+            statusMessage.classList.add(type);
+            statusMessage.style.display = 'block';
+        }
+    </script>
+</body>
+</html>

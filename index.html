@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        <!-- Primary Meta Tags -->
+        <title>Asphalt Calculator | Our flagship tool, the Asphalt Calculator, was designed with both DIY homeowners and professional contractors in mind. </title>
+        <meta 
+          name="title" 
+          content="Asphalt Calculator | Our flagship tool, the Asphalt Calculator, was designed with both DIY homeowners and professional contractors in mind."
+        />
+        <meta 
+          name="description" 
+          content="Calculate asphalt requirements instantly with our professional-grade calculator. Get precise estimates for your paving projects with material cost breakdowns"
+        />
+    
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://asphaltcalculator.io/index.html" />
+        <meta 
+          property="og:title" 
+          content="Asphalt Calculator | Our flagship tool, the Asphalt Calculator, was designed with both DIY homeowners and professional contractors in mind."
+        />
+        <meta 
+          property="og:description" 
+          content="Calculate asphalt needs for driveways, roads & parking lots. Instant results with material cost estimates."
+        />
+        <meta 
+          property="og:image" 
+          content="http://asphaltcalculator.io/assets/images/logo.png"
+        />
+    
+        <!-- Twitter -->
+        <meta property="twitter:card" content="http://asphaltcalculator.io/assets/images/logo.png" />
+        <meta property="twitter:url" content="http://asphaltcalculator.io/index.html" />
+        <meta 
+          property="twitter:title" 
+          content="Asphalt Calculator | Our flagship tool, the Asphalt Calculator, was designed with both DIY homeowners and professional contractors in mind."
+        />
+        <meta 
+          property="twitter:description" 
+          content="Asphalt Calculator | Our flagship tool, the Asphalt Calculator, was designed with both DIY homeowners and professional contractors in mind."
+        />
+        <meta 
+          property="twitter:image" 
+          content="http://asphaltcalculator.io/"
+        />
+    
+        <!-- Canonical URL -->
+        <link rel="canonical" href="http://asphaltcalculator.io/index.html" />
+    
+        <!-- Structured Data -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "Asphalt Calculator",
+          "description": "Professional asphalt calculation tool for accurate paving estimates",
+          "url": "http://asphaltcalculator.io/",
+          "author": {
+            "@type": "Organization",
+            "name": "[YOUR_COMPANY_NAME]"
+          },
+          "image": "http://asphaltcalculator.io/",
+          "mainEntity": {
+            "@type": "SoftwareApplication",
+            "name": "Asphalt Calculator",
+            "applicationCategory": "ConstructionCalculator",
+            "operatingSystem": "Web",
+            "offers": {
+              "@type": "Offer",
+              "price": "0.00",
+              "priceCurrency": "USD"
+            }
+          }
+        }
+        </script>
+    
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="/assets/images/logo.png">
+    
+        <!-- CSS -->
+        <link rel="stylesheet" href="/assets/css/bootstrap.css" />
+        <link rel="stylesheet" href="/assets/scss/pg-home.css" />
+        <link 
+          rel="stylesheet" 
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        />
+    </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+     
+          <a class="navbar-brand ml-2" href="/index.html">     <img src='/assets/images/logo.png' style="height: 3rem;" class="img-fluid mr-3"> Asphalt Calculator</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="/about-us.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="/contact-us.html">Contact Us</a>
+              </li>
+       
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1>
+            You’re a few clicks away from accurate estimates with this Asphalt
+            Calculator!
+          </h1>
+          <p>Are you planning an asphalt project?</p>
+          <p>
+            Whether it's a driveway, parking lot, or road, accuracy is
+            paramount! An asphalt calculator is non-essential to eliminate
+            uncertainties, save time, money, and resources.
+          </p>
+          <p>Inaccurate estimates can leads to:</p>
+          <ul>
+            <li>
+              Underestimation can lead to project delays and costly emergency
+              orders.
+            </li>
+            <li>
+              Overestimation can waste money on excess material and disposal.
+            </li>
+          </ul>
+          <p>
+            Leverage this asphalt calculator in different magnitudes like volume
+            (cu ft, cubic yards, or cubic meters) and weight (tons or tonnes),
+            our calculator conventional hot mix asphalt density.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 mx-auto">
+          <div class="calculator">
+            <div class="header">
+              <div class="unit-toggle">
+                <button
+                  class="unit-btn active"
+                  id="imperialBtn"
+                  onclick="setUnitSystem('imperial')"
+                >
+                  Imperial
+                </button>
+                <button
+                  class="unit-btn"
+                  id="metricBtn"
+                  onclick="setUnitSystem('metric')"
+                >
+                  Metric
+                </button>
+              </div>
+            </div>
+
+            <div class="input-group">
+              <label for="length">Length</label>
+              <i class="fas fa-ruler-horizontal"></i>
+              <input
+                type="number"
+                id="length"
+                step="0.1"
+                placeholder="Enter length"
+              />
+              <span class="unit-label">ft</span>
+              <div class="error-message" id="lengthError"></div>
+            </div>
+
+            <div class="input-group">
+              <label for="width">Width</label>
+              <i class="fas fa-ruler-vertical"></i>
+              <input
+                type="number"
+                id="width"
+                step="0.1"
+                placeholder="Enter width"
+              />
+              <span class="unit-label">ft</span>
+              <div class="error-message" id="widthError"></div>
+            </div>
+
+            <div class="input-group">
+              <label for="thickness">Thickness</label>
+              <i class="fas fa-arrows-alt-v"></i>
+              <input
+                type="number"
+                id="thickness"
+                step="0.1"
+                placeholder="Enter thickness"
+              />
+              <span class="unit-label">in</span>
+              <div class="error-message" id="thicknessError"></div>
+            </div>
+
+            <div class="btn-group">
+              <button class="calculate-btn" onclick="calculateAsphalt()">
+                <i class="fas fa-calculator"></i> Calculate
+              </button>
+              <button class="reset-btn" onclick="resetCalculator()">
+                <i class="fas fa-redo"></i> Reset
+              </button>
+            </div>
+
+            <div class="result-box" id="resultBox">
+              <p class="result-text">Required Asphalt</p>
+              <div class="result-value" id="resultValue">0.00 tons</div>
+              <p class="formula-note" id="formulaNote"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <h2>Quick navigation</h2>
+      <ul>
+        <li>Calculating how much asphalt you need</li>
+        <li>Asphalt basics & applications</li>
+        <li>Types of asphalt</li>
+      </ul>
+      <h3 class="mt-3">Your guide to calculate your asphalt need</h3>
+      <p>
+        <b>Note:</b> The accuracy of this asphalt calculator (also known as a
+        tarmac calculator) is proportionate to the accuracy of the measurements
+        you enter. Ensure accurate measurements for accurate estimates.
+      </p>
+      <p>
+        Road builders, constructors and homeowners, often need to estimate the
+        amount of Hot Mix Asphalt (HMA) required to cover a specific area. Our
+        asphalt calculator (also known as a tarmac calculator) is a valuable
+        tool for this purpose. The calculator uses a standard asphalt density of
+        145 lbs/ft3 (2322 kg/m3), which may vary slightly depending on the
+        specific asphalt mixture you purchase.
+      </p>
+      <p>Let’s get started!</p>
+      <h2 class="mt-3">The calculation process:</h2>
+      <ul>
+        <li>
+          <b>Estimate the volume of asphalt needed:</b> Use geometric formulas
+          and project plans or measurements, including width, length, and depth
+          (thickness).
+        </li>
+        <li>
+          <b>Estimate the density of the hotmix to be used:</b> The standard
+          density for asphalt is 145 lb/ft3 (2322 kg/m3).
+        </li>
+        <li>
+          Multiply the volume by the density (in the same units) to get the
+          weight.
+        </li>
+      </ul>
+      <h2 class="mt-3">The calculator formula:</h2>
+      <p>
+        A simple formula to estimate the asphalt volume and weight required:
+        Volume (cubic feet) = Area (length × width) × Thickness Weight = Volume
+        × Asphalt Density (145 lbs per cubic foot)
+      </p>
+      <p>Inputs You’ll Need:</p>
+      <ul>
+        <li>
+          <b>Area Dimensions:</b> The length and width of the project area (in
+          feet or meters).
+        </li>
+        <li>
+          <b>Thickness:</b> The desired depth of asphalt (in inches or
+          centimeters).
+        </li>
+
+        <li><b>Asphalt Density:</b> Typically 145 lbs/ft³ or 2,320 kg/m³.</li>
+      </ul>
+      <p>
+        This asphalt calculator supports measurement units such as inches, feet,
+        yards, meters, and centimeters. Since measurements aren't always
+        precise, and there can be waste during the application process, it's
+        advised to purchase 5-6% more asphalt than estimated. This helps ensure
+        you don't run out of material. For example, if the asphalt calculator
+        indicates you need 10 tons of asphalt, purchase 10.5 or 11 tons to be on
+        the safe side and avoid additional overhead costs.
+      </p>
+      <p>
+        For complex measurements, like irregularly shaped areas, simply divide
+        the area into several regular-shaped sections. Then, calculate the
+        volume and asphalt requirements for each section using the calculator
+        and sum them up. If you need to do this for many sections, consider
+        using a summation calculator. For slightly irregular shapes, you can
+        make reasonable approximations by taking the average length or width.
+      </p>
+      <img alt="asphalt calculator" src="/assets/images/asphalt.jpg"  class="rounded img-fluid mb-3" style="height: 600px;width: 100%;object-fit: cover;" />
+      <h2 class="mt-3">
+        Step-by-step instructions to use this asphalt calculator
+      </h2>
+      <ul>
+        <li>
+          <b>Select Calculation Type:</b> Choose from options like length,
+          width, depth, area, or volume.
+        </li>
+        <li>
+          <b>Input Dimensions:</b> Enter area length, width, depth, area, or
+          volume with units (e.g., feet, meters).
+        </li>
+        <li>
+          <b>Define Asphalt Density:</b> Enter the asphalt density (e.g.,
+          lb/ft³).
+        </li>
+
+        <li>
+          <b>Add Cost (Optional):</b> Enter price per unit of mass (e.g., per
+          ton) or volume (e.g., per cubic foot).
+        </li>
+        <li><b>Calculate:</b> Click "calculate" to process your inputs.</li>
+        <li>
+          <b>View Results:</b> See area, volume, weight, cost, and a visual
+          representation.
+        </li>
+        <li><b>Reset:</b> Click "Reset" to start a new calculation.</li>
+        <li><b>Close:</b> Click "x" to close the results box.</li>
+      </ul>
+      <h2 class="mt-3">Asphalt basics & applications</h2>
+      <p>
+        Asphalt is a black, sticky, and highly viscous liquid or semi-solid form
+        of petroleum. It is found naturally, but more commonly results from
+        refinement and is classified as a pitch. Asphalt is highly recyclable,
+        offering both cost savings and environmental benefits.
+      </p>
+      <p>
+        Asphalt (tarmac) is widely used for road surfaces, including highways,
+        inner-city and inter-city roads, local roads, car parks, driveways, and
+        pavements. These are the primary reasons people use our calculator. It's
+        estimated that around 94% of the 2.6 million paved roads in the U.S. are
+        made from asphalt. You can also find asphalt on racetracks, tennis
+        courts, and dams. Given its water resistant nature, it’s ideal for cable
+        and pipe coatings and general waterproofing. Asphalt is used in
+        bituminous waterproofing products, where it's a component of roofing
+        felt and is used for sealing flat roofs. Bitumen has other valuable
+        qualities, including durability, high traction, and low light
+        reflectivity.
+      </p>
+      <p>
+        In road construction, asphalt typically serves as a binding agent in
+        asphalt concrete production. Bitumen is mixed with fine and coarse
+        aggregates, such as sand, gravel, and crushed rock. Recycled polymers
+        (e.g., recycled rubber tires) may be added to the hot mix asphalt to
+        modify its properties depending on the intended application.
+      </p>
+      <p>
+        Our hot mix asphalt calculator helps you estimate how much you'll need.
+      </p>
+      <h2 class="mt-3">Types of asphalt</h2>
+      <p>
+        There are more than one type of asphalt, primarily differentiated by the
+        mixing temperature. Selecting the right type is crucial, and calculating
+        its requirement basis the density more important.
+      </p>
+      <ul>
+        <li>Hot Mix Asphalt (HMA)</li>
+        <li>Warm Mix Asphalt</li>
+
+        <li>Driveway Mix Asphalt</li>
+        <li>Porous Asphalt</li>
+      </ul>
+      <h2 class="mt-3">Why Use an Asphalt Calculator?</h2>
+      <ul>
+        <li>
+          <b>Cost Savings:</b> Precisely calculate the required asphalt,
+          minimizing waste and unnecessary expenses.
+        </li>
+        <li>
+          <b>Time Efficiency:</b> Quickly obtain estimates without the need for
+          manual calculations and time-consuming spreadsheets.
+        </li>
+        <li>
+          <b>Enhanced Budget Accuracy:</b> Develop more accurate budget
+          projections for your project, improving overall financial planning.
+        </li>
+      </ul>
+    </div>
+    <footer>
+      <div class="footer-content">
+        <p class="copyright">
+          &copy; 2024 Asphalt Calculator. All rights reserved.
+        </p>
+        <div class="footer-links">
+          <a href="/privacy-policy.html" class="footer-link">Privacy Policy</a>
+          <a href="/terms-and-conditions.html" class="footer-link">Terms of Conditions</a>
+          <a href="/contact-us.html" class="footer-link">Contact Us</a>
+        </div>
+        <p class="disclaimer">
+          Results are estimates only. Actual requirements may vary.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      let currentUnitSystem = "imperial";
+
+      function setUnitSystem(system) {
+        currentUnitSystem = system;
+        document
+          .querySelectorAll(".unit-btn")
+          .forEach((btn) => btn.classList.remove("active"));
+        document.getElementById(system + "Btn").classList.add("active");
+
+        const unitLabels = document.querySelectorAll(".unit-label");
+        if (system === "imperial") {
+          unitLabels[0].textContent = "ft";
+          unitLabels[1].textContent = "ft";
+          unitLabels[2].textContent = "in";
+          document.getElementById("length").placeholder = "Enter length (feet)";
+          document.getElementById("width").placeholder = "Enter width (feet)";
+          document.getElementById("thickness").placeholder =
+            "Enter thickness (inches)";
+        } else {
+          unitLabels[0].textContent = "m";
+          unitLabels[1].textContent = "m";
+          unitLabels[2].textContent = "cm";
+          document.getElementById("length").placeholder =
+            "Enter length (meters)";
+          document.getElementById("width").placeholder = "Enter width (meters)";
+          document.getElementById("thickness").placeholder =
+            "Enter thickness (centimeters)";
+        }
+
+        resetCalculator();
+      }
+
+      function validateInput(value, fieldName) {
+        if (isNaN(value) || value <= 0) {
+          document.getElementById(
+            fieldName + "Error"
+          ).textContent = `Please enter a valid ${fieldName} (positive number)`;
+          document.getElementById(fieldName + "Error").style.display = "block";
+          return false;
+        }
+        document.getElementById(fieldName + "Error").style.display = "none";
+        return true;
+      }
+
+      function calculateAsphalt() {
+        const length = parseFloat(document.getElementById("length").value);
+        const width = parseFloat(document.getElementById("width").value);
+        const thickness = parseFloat(
+          document.getElementById("thickness").value
+        );
+
+        // Validate inputs
+        const validLength = validateInput(length, "length");
+        const validWidth = validateInput(width, "width");
+        const validThickness = validateInput(thickness, "thickness");
+
+        if (!validLength || !validWidth || !validThickness) return;
+
+        let volume, tons, formulaText;
+
+        if (currentUnitSystem === "imperial") {
+          // Imperial calculation (ft, in)
+          const thicknessInFeet = thickness / 12;
+          volume = length * width * thicknessInFeet;
+          tons = (volume * 145) / 2000; // 145 lbs/ft³ density
+          formulaText = `Formula: (Length × Width × (Thickness/12)) × 145 ÷ 2000`;
+        } else {
+          // Metric calculation (m, cm)
+          const thicknessInMeters = thickness / 100;
+          volume = length * width * thicknessInMeters;
+          tons = volume * 2.3; // 2.3 tonne/m³ density
+          formulaText = `Formula: (Length × Width × Thickness/100) × 2.3`;
+        }
+
+        document.getElementById("resultValue").textContent = `${tons.toFixed(
+          2
+        )} ${currentUnitSystem === "imperial" ? "tons" : "metric tons"}`;
+        document.getElementById("formulaNote").textContent = formulaText;
+        document.getElementById("resultBox").style.display = "block";
+      }
+
+      function resetCalculator() {
+        document.getElementById("length").value = "";
+        document.getElementById("width").value = "";
+        document.getElementById("thickness").value = "";
+        document.getElementById("resultBox").style.display = "none";
+        document
+          .querySelectorAll(".error-message")
+          .forEach((error) => (error.style.display = "none"));
+      }
+    </script>
+  </body>
+</html>
